@@ -10,9 +10,9 @@ export default function MarketEvent() {
 
     const [b, setB] = useState(event[currentIndex + 1]?.eventType === "ConfigEvent" ? event[currentIndex].b : 0)
 
-    const [divisorRatio, setDivisorRatio] = useState(event[currentIndex + 1]?.eventType === "ConfigEvent" ? event[currentIndex].divisorRatio : 0)
+    const [divisorRatio, setDivisorRatio] = useState(event[currentIndex + 1]?.eventType === "ConfigEvent" ? event[currentIndex].DivisorRatio : 0)
 
-    const [speard, setSpeard] = useState(event[currentIndex + 1]?.eventType === "ConfigEvent" ? event[currentIndex].spread : 0)
+    const [speard, setSpeard] = useState(event[currentIndex + 1]?.EventType === "ConfigEvent" ? event[currentIndex].Spread : 0)
 
     const [tableInfo, setTableInfo] = useState([])
 
@@ -26,8 +26,8 @@ export default function MarketEvent() {
                 if (event[currentIndex + 1].eventType === "ConfigEvent") {
                     setM(event[currentIndex + 1].m)
                     setB(event[currentIndex + 1].b)
-                    setDivisorRatio(event[currentIndex + 1].divisorRatio)
-                    setSpeard(event[currentIndex + 1].spread)
+                    setDivisorRatio(event[currentIndex + 1].DivisorRatio)
+                    setSpeard(event[currentIndex + 1].Spread)
                 }
                 // get dashboard data
                 await getDashboardData(event[currentIndex + 1])
@@ -64,19 +64,19 @@ export default function MarketEvent() {
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Latest event: Trade Event</div>
                     <p class="text-gray-700 text-base">
-                        Event ID: {event[currentIndex].eventId}
+                        Event ID: {event[currentIndex].EventId}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Operation: {event[currentIndex].buySell.toUpperCase()}
+                        Operation: {event[currentIndex].BuySell.toUpperCase()}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Currency: {event[currentIndex].cCY}
+                        Currency: {event[currentIndex].Ccy}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Quantity: {event[currentIndex].quantity}
+                        Quantity: {event[currentIndex].Quantity}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Tenor: {event[currentIndex].tenor}
+                        Tenor: {event[currentIndex].Tenor}
                     </p>
                     {/* <p class="text-gray-700 text-base">
                         Trade ID: {event[currentIndex].tradeId}
@@ -89,10 +89,10 @@ export default function MarketEvent() {
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Latest event: FX Mid Event</div>
                     <p class="text-gray-700 text-base">
-                        Event ID: {event[currentIndex].eventId}
+                        Event ID: {event[currentIndex].EventId}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Currency: {event[currentIndex].cCY}
+                        Currency: {event[currentIndex].Ccy}
                     </p>
                     <p class="text-gray-700 text-base">
                         rate: {event[currentIndex].rate}
@@ -105,7 +105,7 @@ export default function MarketEvent() {
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Latest event: Config Event</div>
                     <p class="text-gray-700 text-base">
-                        Event ID: {event[currentIndex].eventId}
+                        Event ID: {event[currentIndex].EventId}
                     </p>
                     <p class="text-gray-700 text-base">
                         m: {event[currentIndex].m}
@@ -114,10 +114,10 @@ export default function MarketEvent() {
                         b: {event[currentIndex].b}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Divisor Ratio: {event[currentIndex].divisorRatio}
+                        Divisor Ratio: {event[currentIndex].DivisorRatio}
                     </p>
                     <p class="text-gray-700 text-base">
-                        Spread: {event[currentIndex].spread}
+                        Spread: {event[currentIndex].Spread}
                     </p>
                 </div>
             )
@@ -128,7 +128,7 @@ export default function MarketEvent() {
         return tableInfo.map((item, index) => {
             return (
                 <tr key={index}>
-                    <td className="border">{item.CCy}</td>
+                    <td className="border">{item.Ccy}</td>
                     <td className="border">{item.Tensor}</td>
                     <td className="border">{item.Position}</td>
                     <td className="border">{item.Ask}</td>
