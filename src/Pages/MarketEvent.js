@@ -4,7 +4,7 @@ import Header from '../Components/Header';
 
 export default function MarketEvent() {
 
-    const [currentIndex, setCurrentIndex] = useState(98);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const [m, setM] = useState(event[currentIndex + 1]?.eventType === "ConfigEvent" ? event[currentIndex].m : 0)
 
@@ -37,7 +37,7 @@ export default function MarketEvent() {
     }, [currentIndex]);
 
     const getDashboardData = async (event) => {
-        await fetch('https://reqbin.com/echo/post/json', {
+        await fetch('http://30.205.138.190:8080/priceEngine', {
             method: 'POST',
             body: JSON.stringify(
                 event
@@ -122,8 +122,7 @@ export default function MarketEvent() {
                 </div>
             )
         }
-    }
-
+    } 
     // Display rows in dashboard
     const displayDashboardData = () => {
         return tableInfo.map((item, index) => {

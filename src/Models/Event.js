@@ -1,11 +1,11 @@
 export class Event {
     // 1. Attribute
-    eventId
-    eventType
+    EventId
+    EventType
 
     // 2. Constructor
     constructor(eventId, eventType) {
-        this.eventId = eventId
-        this.eventType = eventType
+        this.EventId = eventId
+        this.EventType = eventType
     }
 }

@@ -1,14 +1,14 @@
 import { Event } from "./Event";
 
 export class FXMidEvent extends Event {
-    cCY
+    Ccy
     rate
 
     constructor(eventId, eventType, cCY, rate) {
         super()
-        this.eventId = eventId
-        this.eventType = eventType
-        this.cCY = cCY
+        this.EventId = eventId
+        this.EventType = eventType
+        this.Ccy = cCY
         this.rate = rate
     }
 }

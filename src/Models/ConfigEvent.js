@@ -4,8 +4,8 @@ export class ConfigEvent extends Event {
     // 1. Attribute
     m
     b
-    divisorRatio
-    spread
+    DivisorRatio
+    Spread
 
     // 2. Constructor
     constructor(eventId, eventType, m, b, divisorRatio, spread) {
@@ -14,7 +14,7 @@ export class ConfigEvent extends Event {
         this.eventType = eventType
         this.m = m
         this.b = b
-        this.divisorRatio = divisorRatio
-        this.spread = spread
+        this.DivisorRatio = divisorRatio
+        this.Spread = spread
     }
 }
