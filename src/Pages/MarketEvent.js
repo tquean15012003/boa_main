@@ -23,7 +23,7 @@ export default function MarketEvent() {
                 setCurrentIndex(currentIndex + 1);
 
                 // Update to the latest configuration information if it is a config event
-                if (event[currentIndex + 1].eventType === "ConfigEvent") {
+                if (event[currentIndex + 1].EventType === "ConfigEvent") {
                     setM(event[currentIndex + 1].m)
                     setB(event[currentIndex + 1].b)
                     setDivisorRatio(event[currentIndex + 1].DivisorRatio)
@@ -59,7 +59,7 @@ export default function MarketEvent() {
 
     // Extract current event
     const displayCurrentEvent = () => {
-        if (event[currentIndex].eventType === "TradeEvent") {
+        if (event[currentIndex].EventType === "TradeEvent") {
             return (
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Latest event: Trade Event</div>
@@ -78,13 +78,13 @@ export default function MarketEvent() {
                     <p class="text-gray-700 text-base">
                         Tenor: {event[currentIndex].Tenor}
                     </p>
-                    {/* <p class="text-gray-700 text-base">
+                    <p class="text-gray-700 text-base">
                         Trade ID: {event[currentIndex].tradeId}
-                    </p> */}
+                    </p>
                 </div>
             )
         }
-        else if (event[currentIndex].eventType === "FXMidEvent") {
+        else if (event[currentIndex].EventType === "FXMidEvent") {
             return (
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Latest event: FX Mid Event</div>

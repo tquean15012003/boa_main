@@ -10,8 +10,8 @@ export class ConfigEvent extends Event {
     // 2. Constructor
     constructor(eventId, eventType, m, b, divisorRatio, spread) {
         super()
-        this.eventId = eventId
-        this.eventType = eventType
+        this.EventId = eventId
+        this.EventType = eventType
         this.m = m
         this.b = b
         this.DivisorRatio = divisorRatio

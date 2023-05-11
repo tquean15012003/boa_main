@@ -10,7 +10,7 @@ data.forEach(element => {
     let newEvent
     switch (element.EventType) {
         case "TradeEvent":
-            newEvent = new TradeEvent(element.EventId, element.EventType, element.BuySell, element.Ccy, element.Tenor, element.TradeId)
+            newEvent = new TradeEvent(element.EventId, element.EventType, element.BuySell, element.Ccy, element.Tenor, element.Quantity, element.TradeId)
             break;
         case "FXMidEvent":
             newEvent = new FXMidEvent(element.EventId, element.EventType, element.Ccy, element.rate)
